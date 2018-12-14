@@ -32,7 +32,7 @@ class LoginForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -75,9 +75,8 @@ class LoginForm extends React.Component {
             <input className="session-submit" type="submit" value="Log In" />
             <span></span>
             <input className="session-submit" onClick={() => this.props.processForm(demo).then(this.props.closeModal())} type="submit" value="Demo Login" />
-            <span className="session-login">Don't have an AirCamp account? 
-            Sign up!</span>
-            {this.props.otherForm}
+            <span className="session-login">Don't have an AirCamp account?&nbsp;{this.props.otherForm}</span>
+            
         </form>
      
     );

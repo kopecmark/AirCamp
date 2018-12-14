@@ -39,11 +39,9 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="login-form-container">
         <form onSubmit={this.handleSubmit} className="login-form-box">
-          Welcome to AirCamp!
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
+          <div className='login-welcome'>Join Hipcamp</div> 
+          <div className='login-tagline'>Discover the best camping near me</div>
           <div onClick={this.props.closeModal} className="close-x">X</div>
           {this.renderErrors()}
           <div className="login-form">
@@ -96,7 +94,6 @@ class SignupForm extends React.Component {
             <input className="session-submit" type="submit" value={this.props.formType} />
           </div>
         </form>
-      </div>
     );
   }
 }
