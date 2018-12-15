@@ -27,7 +27,7 @@ class SignupForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="errors-signup">
         {this.props.errors.map((error, i) => (
           <li key={`error-${i}`}>
             {error}
@@ -39,8 +39,9 @@ class SignupForm extends React.Component {
 
   render() {
     return (
+      <div className="sign-up">
         <form onSubmit={this.handleSubmit} className="signup-form-box">
-          <div className='signup-welcome'>Join Hipcamp</div> 
+          <div className='signup-welcome'>Join AirCamp</div> 
           <div className='signup-tagline'>Discover the best camping near me</div>
           {this.renderErrors()}
           <span></span>
@@ -48,7 +49,6 @@ class SignupForm extends React.Component {
               <input type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
-                className="signup-input"
                 placeholder="First Name..."
               />
             </label>
@@ -56,28 +56,28 @@ class SignupForm extends React.Component {
               <input type="text"
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
-                className="signup-input"
                 placeholder="Last name..."
               />
             </label>
-            <label>
+            <label className="signup-input">
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="signup-input"
+                
                 placeholder="Email address..."
               />
             </label>
-            <label>
+          <label className="signup-input">
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="signup-input"
+                
                 placeholder="Password..."
               />
             </label>
-            <input className="session-submit" type="submit" value="Join AirCamp" />
+            <input className="session-signup" type="submit" value="Join AirCamp" />
         </form>
+      </div>
     );
   }
 }

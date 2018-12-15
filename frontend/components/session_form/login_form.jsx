@@ -32,9 +32,9 @@ class LoginForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul className="errors">
+      <ul >
         {this.props.errors.map((error, i) => (
-          <li key={`error-${i}`}>
+          <li className="errors" key={`error-${i}`}>
             {error}
           </li>
         ))}
@@ -51,8 +51,6 @@ class LoginForm extends React.Component {
           <div className='login-tagline'>It's about time for another camping trip</div> 
           {this.renderErrors()}
           <span></span>
-          <input className="session-submit fb" type="submit" value="Log in with Facebook" />
-          <span className="option">or </span>
             <label>
               <input type="text"
                 value={this.state.email}
