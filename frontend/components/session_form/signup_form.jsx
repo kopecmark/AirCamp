@@ -39,60 +39,44 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-        <form onSubmit={this.handleSubmit} className="login-form-box">
-          <div className='login-welcome'>Join Hipcamp</div> 
-          <div className='login-tagline'>Discover the best camping near me</div>
-          <div onClick={this.props.closeModal} className="close-x">X</div>
+        <form onSubmit={this.handleSubmit} className="signup-form-box">
+          <div className='signup-welcome'>Join Hipcamp</div> 
+          <div className='signup-tagline'>Discover the best camping near me</div>
           {this.renderErrors()}
-          <div className="login-form">
-            <br />
+          <span></span>
             <label>
               <input type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')}
-                className="login-input"
+                className="signup-input"
                 placeholder="First Name..."
               />
             </label>
-            <br />
             <label>
               <input type="text"
                 value={this.state.last_name}
                 onChange={this.update('last_name')}
-                className="login-input"
+                className="signup-input"
                 placeholder="Last name..."
               />
             </label>
-            <br />
-            <label>
-              <input type="text"
-                value={this.state.user_img_url}
-                onChange={this.update('user_img_url')}
-                className="login-input"
-                placeholder="image url..."
-              />
-            </label>
-            <br />
             <label>
               <input type="text"
                 value={this.state.email}
                 onChange={this.update('email')}
-                className="login-input"
+                className="signup-input"
                 placeholder="Email address..."
               />
             </label>
-            <br />
             <label>
               <input type="password"
                 value={this.state.password}
                 onChange={this.update('password')}
-                className="login-input"
+                className="signup-input"
                 placeholder="Password..."
               />
             </label>
-            <br />
-            <input className="session-submit" type="submit" value={this.props.formType} />
-          </div>
+            <input className="session-submit" type="submit" value="Join AirCamp" />
         </form>
     );
   }

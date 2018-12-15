@@ -41,10 +41,8 @@
 .right-nav {
   display: grid;
   grid-column: 3;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(7, auto);
   font-size: 18px;
-
-  
 
   .nav-session {
     border-bottom: 1px solid #ebebeb;

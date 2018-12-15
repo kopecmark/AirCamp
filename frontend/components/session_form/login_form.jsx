@@ -74,8 +74,11 @@ class LoginForm extends React.Component {
             <div className="forgot-pass">Forgot your password?</div>
             <input className="session-submit" type="submit" value="Log In" />
             <span></span>
-            <input className="session-submit" onClick={() => this.props.processForm(demo).then(this.props.closeModal())} type="submit" value="Demo Login" />
-            <span className="session-login">Don't have an AirCamp account?&nbsp;{this.props.otherForm}</span>
+            <input className="session-submit" onClick={() => 
+              this.props.processForm(demo).then(this.props.closeModal())} 
+              type="submit" value="Demo Login" />
+            <span className="session-login">Don't have an AirCamp account?&nbsp;
+              {this.props.otherForm}</span>
             
         </form>
      
