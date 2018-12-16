@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
   window.login = commands.login;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
+  window.fetchListing = fetchListings;
   // end testing section
   
   const root = document.getElementById('root');

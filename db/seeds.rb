@@ -14,4 +14,16 @@ user1 = User.create({
   user_img_url: "google/imgs/profile.jpg"
 })
 
-# post = post.create({author_id: user1.id})
+
+listing1 = Listing.create({
+  user_id: user1.id,
+  title: 'Half Dome Summit',
+  description: "Stay at the top of the world it doesn't get much better then that",
+  pets_allowed: false,
+  terrain: "Forest",
+  price: 150,
+  capacity: 2,
+  category: 'glamping',
+  lon: location_hash[5][0],
+  lat: location_hash[5][1]
+})
