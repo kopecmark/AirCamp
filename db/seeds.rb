@@ -8,7 +8,7 @@
 
 user1 = User.create({
   email: "demo@account.com",
-  first_name: "Lovely Demo Person",
+  first_name: "Demo Person",
   last_name: "Demo Last Name",
   password: "demopassword",
   user_img_url: "google/imgs/profile.jpg"
