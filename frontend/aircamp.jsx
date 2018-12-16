@@ -4,7 +4,10 @@ import configureStore from './store/store';
 import Root from './components/root';
 
 // for testing
-import * as commands from './actions/session_actions';
+import * as sessioncommands from './actions/session_actions';
+import {fetchListings} from './util/listing_api_util';
+
+
 document.addEventListener('DOMContentLoaded', () => {
   
   let store;
@@ -24,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // testing in console
-  window.login = commands.login;
+  window.login = sessioncommands.login;
   window.getState = store.getState;
   window.dispatch = store.dispatch;
-  window.fetchListing = fetchListings;
+  window.fetchListings = fetchListings;
   // end testing section
   
   const root = document.getElementById('root');
