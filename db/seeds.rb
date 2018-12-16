@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Listing.delete_all
+User.delete_all
 
 user1 = User.create({
   email: "demo@account.com",
@@ -17,13 +19,12 @@ user1 = User.create({
 
 listing1 = Listing.create({
   user_id: user1.id,
-  title: 'Half Dome Summit',
+  site_title: 'Half Dome Summit',
   description: "Stay at the top of the world it doesn't get much better then that",
-  pets_allowed: false,
-  terrain: "Forest",
-  price: 150,
-  capacity: 2,
-  category: 'glamping',
-  lon: location_hash[5][0],
-  lat: location_hash[5][1]
+  daily_cost: 50,
+  check_in_time: "4:00 pm",
+  check_out_time: "11:00 am",
+  capacity: 4,
+  lng: 345345345.4,
+  lat: 345345345.6
 })
