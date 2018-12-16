@@ -13,7 +13,7 @@ export const receiveListing = (listing) => ({
   listing
 });
 
-export const fetchListings = listings => dispatch => (
+export const fetchListings = (listings) => dispatch => (
   APIUtil.fetchListings(listings)
     .then(payload => dispatch(receiveListings(payload)))
 );
