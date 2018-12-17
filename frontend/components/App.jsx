@@ -16,7 +16,8 @@ const App = () => (
       <NavBarContainer />
     </header>
     <Modal />
-    
+
+
   </div>
 );
 
