@@ -4,7 +4,9 @@ import { Link, withRouter } from 'react-router-dom';
 const ListingIndexItem = ({ listing }) => (
   <li>
     <div>
-      <h1>${listing.site_title}</h1>
+      <h2>{listing.site_title}</h2>
+      <img src={listing.photoUrls[0]} />
+      ${listing.daily_cost}/night
     </div>
   </li>
 )
