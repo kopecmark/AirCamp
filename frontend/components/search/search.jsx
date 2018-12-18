@@ -10,16 +10,20 @@ class Search extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   render() {
+
+    const {listings, fetchListings} = this.props
     return(
+      <div>
         <div>
-          <ListingIndex />
+          <ListingIndex listings={listings} fetchListings={fetchListings} />
         </div>
         <div>
-          <ListingMap />
+          <ListingMap listings={listings}/>
         </div>
-      );
-  };
+      </div>
+    )
+  }
 }
 export default Search;
