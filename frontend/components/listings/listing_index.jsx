@@ -9,7 +9,8 @@ class ListingIndex extends React.Component {
 
 
   render() {
-    let listingItems = this.props.listings.map(listing => {
+    if (this.props.listings){
+    let listingItems = Object.values(this.props.listings).map(listing => {
       return (
         <ListingIndexItem
           listing={listing}
@@ -18,6 +19,7 @@ class ListingIndex extends React.Component {
         />
       )
     })
+
     return (
       <div>
         <h3>Where to Stay</h3>
@@ -28,7 +30,12 @@ class ListingIndex extends React.Component {
         </div>
       </div>
     )
-
+    }
+    else {
+      return (
+        <div></div>
+      )
+    }
   }
 }
 
