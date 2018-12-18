@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   
   // testing in console
-  window.login = sessioncommands.login;
-  window.getState = store.getState;
-  window.dispatch = store.dispatch;
-  window.fetchListings = fetchListings;
+  // window.login = sessioncommands.login;
+  // window.getState = store.getState;
+  // window.dispatch = store.dispatch;
+  // window.fetchListings = fetchListings;
   // end testing section
   
   const root = document.getElementById('root');
