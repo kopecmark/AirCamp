@@ -6,7 +6,7 @@ import { fetchListings } from '../../actions/listing_actions'
 
 const mapStateToProps = (state) => {
  
-
+  debugger
   return ({
     listings: state.entities.listings
   })
