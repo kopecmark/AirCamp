@@ -10,6 +10,7 @@ import NavBarContainer from '././nav_bar/nav_bar_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import ListingIndexContainer from './listings/listing_index_container';
+import SearchContainer from './search/search_container';
 
 const App = () => (
   <div>
@@ -19,9 +20,7 @@ const App = () => (
     <Modal />
 
     <Switch>
-      <Route exact path="/listings" component={ListingIndexContainer} />
-      <Route exact path="/" component={ListingIndexContainer} />
-
+      <Route exact path="/" component={SearchContainer} />
       <Redirect to="/" />
     </Switch>
 
