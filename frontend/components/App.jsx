@@ -3,6 +3,7 @@ import {
   Route,
   Link,
   Switch,
+  Redirect
 } from 'react-router-dom';
 
 import NavBarContainer from '././nav_bar/nav_bar_container';
@@ -19,6 +20,9 @@ const App = () => (
 
     <Switch>
       <Route exact path="/listings" component={ListingIndexContainer} />
+      <Route exact path="/" component={ListingIndexContainer} />
+
+      <Redirect to="/" />
     </Switch>
 
   </div>
