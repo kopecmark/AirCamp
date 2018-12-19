@@ -1,6 +1,7 @@
-.listings-map-container {
+.listings-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  padding: 25px;
-  height: 100vh;
+  grid-template-columns: auto 1fr;
+  padding: 0px 25px 0px 25px;
+  height: 100%;
+  grid-column-gap: 15px;
 }
