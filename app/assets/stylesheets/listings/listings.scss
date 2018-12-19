@@ -1,5 +1,27 @@
 .all-listings {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
+  height: 92vh;
   overflow: scroll;
+  grid-column-gap: 24px;
+}
+
+.listing-container {
+  padding-bottom: 24px;
+}
+
+.listing-thumbnail {
+  width: 385px;
+  height: 252px;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+}
+
+.listing-thumbnail + h2 {
+  max-width: 90%;
+  text-overflow: ellipsis;
+  font-size: 20px;
+  padding-top: 5px;
 }
