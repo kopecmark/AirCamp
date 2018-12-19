@@ -15,7 +15,7 @@ class Search extends React.Component {
 
     const {listings, fetchListings} = this.props
     return(
-      <div className="listings-map-container">
+      <div className="listings-container">
           <ListingIndex listings={listings} fetchListings={fetchListings} />
           <ListingMap listings={listings} />
       </div>
