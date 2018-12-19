@@ -16,9 +16,14 @@
 
 
 @import "base/reset.scss";
-@import "api/navbar/navbar.scss";
+@import "navbar/navbar.scss";
 @import "modal/modal.scss";
 @import "session/login.scss";
 @import "session/signup.scss";
 @import "session/logged_in.scss";
 @import "map/map.scss";
+@import "search/search.scss";
+@import "listings/listings.scss";
+
+
+
