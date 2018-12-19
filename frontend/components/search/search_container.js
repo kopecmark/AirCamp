@@ -5,8 +5,10 @@ import { fetchListings } from '../../actions/listing_actions'
 
 
 const mapStateToProps = (state) => {
+  let listings = Object.keys(state.entities.listings).map(key => state.entities.listings[key])
   return({
-    listings: state.entities.listings
+    listings: listings
+    
   })
 }
 
