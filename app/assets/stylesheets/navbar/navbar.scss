@@ -2,8 +2,8 @@
   display: grid;
   grid-template-columns: 193px auto 600px;
   align-items: center;
-  height: 70px;
-  
+  height: 8vh;
+  padding-bottom: 10px;
 }
 
 .search-container {
@@ -27,7 +27,6 @@
 
 .fas fa-search:before {
     content: "\f002";
-    
 }
 
 .logo {
