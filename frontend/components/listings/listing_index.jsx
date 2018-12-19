@@ -22,9 +22,8 @@ class ListingIndex extends React.Component {
 
     return (
       <div>
-        <h3>Where to Stay</h3>
         <div>
-          <ul>
+          <ul className="all-listings">
             {listingItems}
           </ul>
         </div>
