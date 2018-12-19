@@ -1,0 +1,68 @@
+.navbar {
+  display: grid;
+  grid-template-columns: 193px auto 600px;
+  align-items: center;
+  height: 70px;
+  
+}
+
+.search-container {
+  display: grid;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #ebebeb;
+  border-radius: 4px;
+  width: 400px;
+  height: 50px;
+  align-items: center;
+  padding: 0px 17px 0px 17px;
+
+  input {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: left;
+    padding-left: 5px;
+    width: 90%;
+  }
+}
+
+.fas fa-search:before {
+    content: "\f002";
+    
+}
+
+.logo {
+  justify-self: center;
+  img {
+    width: 135px; 
+    height: auto;
+  }
+}
+
+.right-nav {
+  display: grid;
+  grid-column: 3;
+  grid-template-columns: repeat(7, auto);
+  font-size: 18px;
+
+  .nav-session {
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 2px;
+  }
+  
+  .nav-links {
+    font-size: 15px;
+    border-bottom: 3px solid transparent;
+  }
+
+  .nav-links:hover {
+    border-bottom: 2px solid #40d9ac;
+    box-sizing: border-box;
+    padding-bottom: 2px;
+  }
+  .nav-session:hover {
+    font-size: 15px;
+    border-bottom: 1px solid black;
+  }
+  
+}
+
