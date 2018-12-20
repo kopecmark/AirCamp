@@ -39,21 +39,21 @@ class ListingShow extends React.Component {
             <h5>Activities</h5>
             <h6>Offered on the Host's property or nearby.</h6>
             <ul>
-              <li><div>🧗</div>
+              <li><div></div>
                 <p>Climbing</p></li>
-              <li><div>🚵‍♂️</div>
+              <li><div></div>
                 <p>Biking</p></li>
-              <li><div>🏇</div>
+              <li><div></div>
                 <p>Horseback riding</p></li>
-              <li><div>🏄‍♂️</div>
+              <li><div></div>
                 <p>Surfing</p></li>
-              <li><div>🥾</div>
+              <li><div></div>
                 <p>Hiking</p></li>
-              <li><div>🚣</div>
+              <li><div></div>
                 <p>Paddling</p></li>
-              <li><div>🦜</div>
+              <li><div></div>
                 <p>Wildlife watching</p></li>
-              <li><div>⛷️</div>
+              <li><div></div>
                 <p>Skiing</p></li>
             </ul>
           </div>
