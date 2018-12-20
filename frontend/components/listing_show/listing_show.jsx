@@ -1,4 +1,4 @@
-import React from 'React';
+import React from 'react';
 
 class ListingShow extends React.Component {
   constructor(props){
@@ -11,6 +11,16 @@ class ListingShow extends React.Component {
 
 
   render () {
+    let host;
+
+    if (!this.props.listing || !this.props.host) {
+      host =  null;
+    } else {
+    
+        host = this.props.listingHost.first_name
+
+    }
+
     if (this.props.listing.photoUrls === undefined) {
       return null
     }
@@ -25,7 +35,7 @@ class ListingShow extends React.Component {
           <h3>{this.props.listing.site_title} </h3>
           <p>{this.props.listing.description}</p>
           <div className="listing-spacer"></div>
-          <h4>Details</h4>
+          <h4>Details {host} </h4>
           <div className="details-container">
             <ul className="details-items">
               <li><span>Check in:</span> {this.props.listing.check_in_time}</li>
@@ -59,7 +69,7 @@ class ListingShow extends React.Component {
           </div>
           
         </div>
-      </div>
+        </div>
     )
   }
 }

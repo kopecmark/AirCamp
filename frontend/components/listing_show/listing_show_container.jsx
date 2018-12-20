@@ -3,8 +3,12 @@ import ListingShow from './listing_show';
 import {fetchListing} from '../../actions/listing_actions';
 
 const msp = (state, ownProps) => {
+  const listing = state.entities.listings[ownProps.match.params.id] || {}
+  const listingHost = state.entities.users[listing.user_id];
+  
   return ({
-    listing: state.entities.listings[ownProps.match.params.id] || {},
+    listing,
+    listingHost
   })
 }
 
