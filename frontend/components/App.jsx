@@ -11,6 +11,7 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import Modal from './modal/modal';
 import ListingIndexContainer from './listings/listing_index_container';
 import SearchContainer from './search/search_container';
+import ListingShowContainer from './listing_show/listing_show_container';
 
 const App = () => (
   <div>
@@ -20,6 +21,8 @@ const App = () => (
     <Modal />
 
     <Switch>
+      <Route exact path="/listings/:id" component={ListingShowContainer} />
+      <Route exact path="/listings" component={SearchContainer} />
       <Route exact path="/" component={SearchContainer} />
       <Redirect to="/" />
     </Switch>
