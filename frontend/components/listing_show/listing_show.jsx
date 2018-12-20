@@ -24,34 +24,40 @@ class ListingShow extends React.Component {
         <div className='listing-information'>
           <h3>{this.props.listing.site_title} </h3>
           <p>{this.props.listing.description}</p>
-          <h3>Details</h3>
+          <div className="listing-spacer"></div>
+          <h4>Details</h4>
           <div className="details-container">
-            <ul>
-              <li>Check in: {this.props.listing.check_in_time}</li>
-              <li>On arrival: Meet and greet </li>
-              <li>Check out: {this.props.listing.check_in_time}</li>
-              <li>Minimum nights: 1 night</li>
-              <li>Group sizes: {this.props.listing.capacity} people per site</li>
+            <ul className="details-items">
+              <li><span>Check in:</span> {this.props.listing.check_in_time}</li>
+              <li><span>On arrival:</span> Meet and greet </li>
+              <li><span>Check out:</span> {this.props.listing.check_in_time}</li>
+              <li><span>Minimum nights:</span> 1 night</li>
+              <li><span>Group sizes:</span> {this.props.listing.capacity} people per site</li>
             </ul>
           </div>
           <div className='activities-container'>
-            <h3>Activities</h3>
-            <h4>Offered on the Host's property or nearby.</h4>
+            <h5>Activities</h5>
+            <h6>Offered on the Host's property or nearby.</h6>
             <ul>
               <li><div>🧗</div>
-                Climbing</li>
+                <p>Climbing</p></li>
               <li><div>🚵‍♂️</div>
-                Biking</li>
+                <p>Biking</p></li>
               <li><div>🏇</div>
-                Horseback riding</li>
+                <p>Horseback riding</p></li>
               <li><div>🏄‍♂️</div>
-                Surfing</li>
+                <p>Surfing</p></li>
               <li><div>🥾</div>
-                Hiking</li>
+                <p>Hiking</p></li>
               <li><div>🚣</div>
-                Paddling</li>
+                <p>Paddling</p></li>
+              <li><div>🦜</div>
+                <p>Wildlife watching</p></li>
+              <li><div>⛷️</div>
+                <p>Skiing</p></li>
             </ul>
           </div>
+          
         </div>
       </div>
     )
