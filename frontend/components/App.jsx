@@ -12,6 +12,7 @@ import Modal from './modal/modal';
 import ListingIndexContainer from './listings/listing_index_container';
 import SearchContainer from './search/search_container';
 import ListingShowContainer from './listing_show/listing_show_container';
+import SplashContainer from './splash/splash';
 
 const App = () => (
   <div>
@@ -23,7 +24,7 @@ const App = () => (
     <Switch>
       <Route exact path="/listings/:id" component={ListingShowContainer} />
       <Route exact path="/listings" component={SearchContainer} />
-      <Route exact path="/" component={SearchContainer} />
+      <Route path="/" component={SplashContainer} />
       <Redirect to="/" />
     </Switch>
 

@@ -41,7 +41,7 @@ class ListingShow extends React.Component {
             <ul className="details-items">
               <li><span>Check in:</span> {listing.check_in_time}</li>
               <li><span>On arrival:</span> Meet and greet </li>
-              <li><span>Check out:</span> {listing.check_in_time}</li>
+              <li><span>Check out:</span> {listing.check_out_time}</li>
               <li><span>Minimum nights:</span> 1 night</li>
               <li><span>Group sizes:</span> {listing.capacity} people per site</li>
             </ul>

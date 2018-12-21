@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 
 class NavBar extends React.Component {
   renderSessionOptions() {
@@ -37,13 +37,15 @@ class NavBar extends React.Component {
     )
   }
 
+
   renderSearch() {
     return (
-      <div className='search-container'>
-        <form>
+      <div className='search-container' >
+        <form onSubmit={(e) => this.props.history.push('/listings')}>
           <span><i className="fas fa-search"></i></span>
           <input type="text"
-            placeholder="Search..."/>
+            placeholder="Search..."
+            />
         </form>
       </div>
     )
