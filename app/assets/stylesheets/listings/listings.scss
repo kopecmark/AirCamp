@@ -16,7 +16,7 @@
   object-fit: cover;
   border-radius: 4px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-
+  transition: width 0.3s, height 0.3s linear;
 }
 
 .listing-thumbnail + h2 {
