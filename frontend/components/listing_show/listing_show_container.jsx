@@ -4,11 +4,11 @@ import {fetchListing} from '../../actions/listing_actions';
 
 const msp = (state, ownProps) => {
   const listing = state.entities.listings[ownProps.match.params.id] || {}
-  const listingHost = state.entities.users[listing.user_id];
+  
   
   return ({
-    listing,
-    listingHost
+    listing
+
   })
 }
 

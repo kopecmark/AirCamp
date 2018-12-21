@@ -5,8 +5,10 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-Listing.delete_all
-User.delete_all
+require "open-uri"
+
+Listing.destroy_all
+User.destroy_all
 
 user1 = User.create({
   email: "demo@account.com",
@@ -143,38 +145,38 @@ listing9 = Listing.create({
   lng: -122.463752
 })
 
-listing6.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite01-01.jpg'), filename: 'campsite01-01.jpg')
-listing6.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite01-02.jpg'), filename: 'campsite01-02.jpg')
-listing6.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite01-03.jpg'), filename: 'campsite01-03.jpg')
+listing6.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite01-01.jpg'), filename: 'campsite01-01.jpg')
+listing6.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite01-02.jpg'), filename: 'campsite01-02.jpg')
+listing6.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite01-03.jpg'), filename: 'campsite01-03.jpg')
 
-listing2.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite02-01.jpg'), filename: 'campsite02-01.jpg')
-listing2.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite02-02.jpg'), filename: 'campsite02-02.jpg')
-listing2.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite02-03.jpg'), filename: 'campsite02-03.jpg')
+listing2.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite02-01.jpg'), filename: 'campsite02-01.jpg')
+listing2.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite02-02.jpg'), filename: 'campsite02-02.jpg')
+listing2.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite02-03.jpg'), filename: 'campsite02-03.jpg')
 
-listing3.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite03-01.jpg'), filename: 'campsite03-01.jpg')
-listing3.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite03-02.jpg'), filename: 'campsite03-02.jpg')
-listing3.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite03-03.jpg'), filename: 'campsite03-03.jpg')
+listing3.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite03-01.jpg'), filename: 'campsite03-01.jpg')
+listing3.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite03-02.jpg'), filename: 'campsite03-02.jpg')
+listing3.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite03-03.jpg'), filename: 'campsite03-03.jpg')
 
-listing4.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite04-01.jpg'), filename: 'campsite04-01.jpg')
-listing4.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite04-02.jpg'), filename: 'campsite04-02.jpg')
-listing4.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite04-03.jpg'), filename: 'campsite04-03.jpg')
+listing4.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite04-01.jpg'), filename: 'campsite04-01.jpg')
+listing4.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite04-02.jpg'), filename: 'campsite04-02.jpg')
+listing4.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite04-03.jpg'), filename: 'campsite04-03.jpg')
 
-listing5.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite05-01.jpg'), filename: 'campsite05-01.jpg')
-listing5.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite05-02.jpg'), filename: 'campsite05-02.jpg')
-listing5.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite05-03.jpg'), filename: 'campsite05-03.jpg')
+listing5.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite05-01.jpg'), filename: 'campsite05-01.jpg')
+listing5.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite05-02.jpg'), filename: 'campsite05-02.jpg')
+listing5.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite05-03.jpg'), filename: 'campsite05-03.jpg')
 
-listing1.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite06-01.jpg'), filename: 'campsite06-01.jpg')
-listing1.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite06-02.jpg'), filename: 'campsite06-02.jpg')
-listing1.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite06-03.jpg'), filename: 'campsite06-03.jpg')
+listing1.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite06-01.jpg'), filename: 'campsite06-01.jpg')
+listing1.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite06-02.jpg'), filename: 'campsite06-02.jpg')
+listing1.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite06-03.jpg'), filename: 'campsite06-03.jpg')
 
-listing7.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite07-01.jpg'), filename: 'campsite07-01.jpg')
-listing7.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite07-02.jpg'), filename: 'campsite07-02.jpg')
-listing7.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite07-03.jpg'), filename: 'campsite07-03.jpg')
+listing7.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite07-01.jpg'), filename: 'campsite07-01.jpg')
+listing7.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite07-02.jpg'), filename: 'campsite07-02.jpg')
+listing7.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite07-03.jpg'), filename: 'campsite07-03.jpg')
 
-listing8.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite08-01.jpg'), filename: 'campsite08-01.jpg')
-listing8.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite08-02.jpg'), filename: 'campsite08-02.jpg')
-listing8.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite08-03.jpg'), filename: 'campsite08-03.jpg')
+listing8.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite08-01.jpg'), filename: 'campsite08-01.jpg')
+listing8.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite08-02.jpg'), filename: 'campsite08-02.jpg')
+listing8.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite08-03.jpg'), filename: 'campsite08-03.jpg')
 
-listing9.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite09-01.jpg'), filename: 'campsite09-01.jpg')
-listing9.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite09-02.jpg'), filename: 'campsite09-02.jpg')
-listing9.photos.attach(io: File.open('app/assets/images/campsite_photos/campsite09-03.jpg'), filename: 'campsite09-03.jpg')
+listing9.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite09-01.jpg'), filename: 'campsite09-01.jpg')
+listing9.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite09-02.jpg'), filename: 'campsite09-02.jpg')
+listing9.photos.attach(io: open('https://s3-us-west-1.amazonaws.com/aircamp-pro/campsite09-03.jpg'), filename: 'campsite09-03.jpg')

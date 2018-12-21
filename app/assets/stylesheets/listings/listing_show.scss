@@ -1,13 +1,21 @@
 .listing-images {
   display: grid;
-  grid-template-columns: 720px 620px 550px;
-  grid-template-rows: 480px;
+  grid-template-columns: 38% 33% 29%;
+  grid-template-rows: 24vw;
   grid-column-gap: 15px;
   object-fit: contain;
  
   img {
     height: 100%;
     overflow: hidden;
+  }
+}
+
+.hosted-by {
+  grid-column: 1;
+  grid-row: 2;
+  span {
+    font-weight: 600;
   }
 }
 
