@@ -3,6 +3,8 @@
 
 Live Site: [AirCamp](https://air-camp.herokuapp.com)
 
+## Overview
+AirCamp is a full-stack single-page web application inspired by [HipCamp](https://www.hipcamp.com/). The frontend utilizes React.js with Redux while the backend utilizes the Ruby on Rails framework with PostGresQL.
 
 ## Contents
 * [Technologies Used](#technologies-used)
