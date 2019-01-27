@@ -1,4 +1,3 @@
-# [AirCamp](https://air-camp.herokuapp.com)
 ![Logo](https://s3-us-west-1.amazonaws.com/aircamp-pro/aircamplogo.png)
 
 Live Site: [AirCamp](https://air-camp.herokuapp.com)
@@ -6,24 +5,24 @@ Live Site: [AirCamp](https://air-camp.herokuapp.com)
 ## Overview
 AirCamp is a full-stack single-page web application inspired by [HipCamp](https://www.hipcamp.com/). The frontend utilizes React.js with Redux while the backend utilizes the Ruby on Rails framework with PostGresQL.
 
-## Contents
-* [Technologies Used](#technologies-used)
-* [Features](#features)
-* [Code Highlights](#code-highlights)
-* [Planned Work](#planned-work)
+## Functionality
+* User can create an account and login
+* User can navigate listings and view their location on Google Maps
+* A listing can be selected to view addistional details about the property
 
 ## Technologies Used
 ### Backend
 * Framework: Ruby on Rails (v5.2.1)
 * Database: PostgreSQL (v11.0)
-* External APIs: Google Maps API 
+* External APIs: Google Maps API
+* AWS S3: stores listing photos
 
 ### Frontend
 * Framework: React/Redux (v16.6.3/4.0.1)
 * Styling: SCSS
 * User Authentication: Created using BCrypt (v3.1.7)
 
-
-## Features
-* 
-
+## Possible Future Implementations
+* Ability for a user to view listing availability
+* Ability for a user to book a listing
+* Ability for a user to leave a review
