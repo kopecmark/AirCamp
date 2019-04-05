@@ -22,14 +22,6 @@ class LoginForm extends React.Component {
     this.props.processForm(user).then(this.props.closeModal);
   }
 
-  // handleDemo(e) {
-  //   e.preventDefault();
-  //   if (this.props.currentUser) {
-  //     this.props.closeModal;
-  //   }
-  // }
-
-
   renderErrors() {
     return (
       <ul >
@@ -69,7 +61,7 @@ class LoginForm extends React.Component {
               />
             </label>
             <span></span>
-            <div className="forgot-pass">Forgot your password?</div>
+            
             <input className="session-submit" type="submit" value="Log In" />
             <span></span>
             <input className="session-submit" onClick={() => 
