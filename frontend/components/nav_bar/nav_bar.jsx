@@ -19,7 +19,7 @@ class NavBar extends React.Component {
           <li><span className="nav-links">Camp</span></li>
           <li><span className="nav-links">Host</span></li>
           <li><span className="nav-links">Scout</span></li>
-          <li><span className="nav-links">About</span></li>
+          <li><span className="nav-links">Explore the Campsites</span></li>
           <li><span className="nav-session"><button onClick={() => this.props.openModal('signup')}>Sign up</button></span></li>
           <li><span className="nav-session"><button onClick={() => this.props.openModal('login')}>Log in</button></span></li>
         </ul>

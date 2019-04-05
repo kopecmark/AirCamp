@@ -12,11 +12,11 @@ const mapStateToProps = (state) => {
   })
 }
 
-const mapdispatchToProps = dispatch => {
+const mapDispatchToProps = dispatch => {
 
   return ({
     fetchListings: () => dispatch(fetchListings()),
   })
+  
 }
-
-export default connect(mapStateToProps, mapdispatchToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
