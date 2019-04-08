@@ -1,28 +1,44 @@
 import React from 'react';
-import { Link, Redirect } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 class NavBar extends React.Component {
+  
+  showExplore() {
+      return (
+      <Link to="/listings">
+        <span className="nav-links">Explore the Campsites</span>
+      </Link>
+      );
+  }
+  
   renderSessionOptions() {
-    const { currentUser, logout } = this.props;
+    const { currentUser, logout , location} = this.props;
+
+    const atListingDisplay = (location.pathname === '/listings') ? null : this.showExplore();
+
     if (currentUser) {
       return (
-        <ul className='right-nav-logged-in'>
-          <li className="session-name">Hi, {currentUser.first_name}!</li>
-          <li><button className="logout-button" onClick={logout}>Log Out
-            </button></li>
+        <ul className='right-nav'>
+          <li>{atListingDisplay}</li> 
+          <li><Link to="/listings"><span className="nav-links">Trips</span></Link></li>
+          <li><span className="nav-session"><button onClick={logout}>
+                Logout
+              </button></span>
+          </li>
         </ul>
       );
     } else {
       return (
         <ul className='right-nav'>
-          <li><span className="nav-links">Explore the Campsites</span></li>
-          <li><span className="nav-session"><button onClick={() => this.props.openModal('signup')}>Sign up</button></span></li>
-          <li><span className="nav-session"><button onClick={() => this.props.openModal('login')}>Log in</button></span></li>
+          <li>{atListingDisplay}</li> 
+          <li><span className="nav-session"><button onClick={() => this.props.openModal('signup')}>Sign Up</button></span></li>
+          <li><span className="nav-session"><button onClick={() => this.props.openModal('login')}>Log In</button></span></li>
         </ul>
       )
     }
   }
 
+  
   renderLogo() {
     return (
         <div className="logo">
