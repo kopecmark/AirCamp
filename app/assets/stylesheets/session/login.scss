@@ -1,6 +1,6 @@
 .login-form-box {
   display: grid;
-  grid-template-rows: 36px 25px auto 20px 68px 10px 68px 10px 30px 65px 10px 65px 40px;
+  grid-template-rows: 36px 25px auto 20px 68px 10px 68px 10px 65px 10px 65px 40px;
   width: 300px;
   text-align: center;
   padding: 15px;
@@ -53,10 +53,6 @@
 
 .fb {
   background-color: #3b5998;
-}
-
-.password {
-  color: black;
 }
 
 .session-submit {
