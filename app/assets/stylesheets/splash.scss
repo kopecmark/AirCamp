@@ -1,64 +1,64 @@
 .splash-container {
-  display: grid;
-  padding-top: 10px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows:  auto;
-
-  img {
-    grid-column: 2;
-    grid-row: 1 / span 2;
-    object-fit: cover;
-    height: 540px;
-  }
-
-  .left-side {
-    display: grid;
-    width: 630px;
-    margin: 0 auto;
-
+  display: flex;
+  flex-direction: column;
+  width: 80vw;
+  margin: 0 auto;
     h1 {
       padding-top: 22px;
-      width: 630px;
-      font-size: 60px;
+      width: 40%;
+      min-width: 375px;
+      font-size: 50px;
+      align-self: flex-start;
     }
-
+    
     h2 {
-      padding-top: 11px;
+      padding-top: 22px;
       padding-bottom: 35px;
       font-size: 20px;
+      width: 40%;
+      min-width: 375px;
       font-weight: 400;
+      align-self: flex-start;
     }
-
-  }
 
 }
 
 .splash-search {
+  border: 1px solid #ebebeb;
+  padding: 25px 20px 20px 20px;
+  box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.1);
+  min-width: 375px;
+  
+ 
   
   form {
-    display: grid;
+    display: flex;
+    margin: -10px;
+    flex-wrap: wrap;
+
+    > * {
+      margin: 10px;
+    }
   }
+
+ 
 
   .input-box {
     border: 1px solid #ebebeb;
     box-shadow: 1px 2px 5px 0px rgba(0,0,0,0.1);
     padding-left: 15px;
-    margin-bottom: 10px;
-
- 
+    flex: 1 0 50%;
+    min-width: 330px;
   }
 
   input {
-    
     font-size: 20px;
-    margin-bottom: 10px;
-    height: 95px;
+    height: 63px;
     padding-left: 10px;
   }
 
   
   .submit-search {
-    justify-self: end;
     text-align: center;
     font-size: 17px;
     background-color: #40d9ac;
@@ -67,7 +67,7 @@
     border: 3px solid #40d9ac!important;
     font-weight: 500;
     width: 150px;
-    height: 40px;
+    height: 59px;
     transition: all 0.5s ease;
 
     i {

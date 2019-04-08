@@ -11,9 +11,9 @@ class Splash extends React.Component {
             <input type="text"
               placeholder="Camping near me..." />
           </div>
-          <button className="submit-search" 
+          <button className="submit-search"
             onClick={(e) => this.props.history.push('/listings')}
-            type="submit" value="Search" ><i className="fas fa-search"></i> Search</button>
+            type="submit" value="Search" ><i className="fas fa-search"></i>Search</button>
         </form>
       </div>
     )
@@ -21,20 +21,17 @@ class Splash extends React.Component {
 
 
   render() {
-    return (
+    return(
       <div>
         <div className="splash-container">
-          <div className="left-side">
-            <h1>Camp anywhere you want in the world. </h1>
-            <h2>Book amazing camping experiences all over the world. Endless possibilities to choose from, just a couple clicks away.</h2>
-            {this.renderSearch()}
-          </div>
-          <img src={window.images.splash} />
-          
+          <h1>Camp anywhere you want. </h1>
+          <h2>Book amazing camping experiences. Endless possibilities to choose from, just a couple clicks away.</h2>
+          <div>{this.renderSearch()}</div>
+
         </div>
       </div >
-        )
-  }
+    )}
+
 }
 
 export default Splash;
