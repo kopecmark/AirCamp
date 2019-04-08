@@ -1,9 +1,9 @@
 import React from 'react';
 import {
   Route,
-  Link,
   Switch,
-  Redirect
+  Redirect, 
+  withRouter
 } from 'react-router-dom';
 
 import NavBarContainer from '././nav_bar/nav_bar_container';
@@ -17,7 +17,10 @@ import SplashContainer from './splash/splash';
 const App = () => (
   <div>
     <header >
-      <NavBarContainer />
+      <Switch>
+        <Route exact path="/listings" component={NavBarContainer} onHome={false}/>
+        <Route path="/" component={NavBarContainer} onHome={true}/>
+      </Switch>
     </header>
     <Modal />
 
@@ -31,4 +34,4 @@ const App = () => (
   </div>
 );
 
-export default App;
+export default withRouter(App);
