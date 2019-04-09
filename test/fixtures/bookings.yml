@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  listing_id: MyString
+  integer: MyString
+  user_id: MyString
+  integer: MyString
+  start_date: MyString
+  datetime: MyString
+  end_date: MyString
+  datetime: MyString
+
+two:
+  listing_id: MyString
+  integer: MyString
+  user_id: MyString
+  integer: MyString
+  start_date: MyString
+  datetime: MyString
+  end_date: MyString
+  datetime: MyString
