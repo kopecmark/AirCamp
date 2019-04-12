@@ -17,6 +17,7 @@ To run this application locally:
 * User can create an account and login
 * User can navigate listings and view their location on Google Maps
 * A listing can be selected to view addistional details about the property
+* Adjusted google map api to only display relevant controls to minimize distractions
 
 ## Technologies Used
 ### Backend

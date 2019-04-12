@@ -21,4 +21,4 @@ class Api::ListingsController < ApplicationController
     )
   end
   
-end
+end  
