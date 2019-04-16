@@ -27,6 +27,12 @@ class Api::BookingsController < ApplicationController
   #   @booking = Booking.find(params[:id])
   # end
 
+  def destroy
+   @booking = current_user.bookings.find((params[:id]))
+   @booking.destroy
+   render json: @booking.id
+  end
+
   private
   def booking_params
     params.require(:booking).permit(
