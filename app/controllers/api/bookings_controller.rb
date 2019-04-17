@@ -4,6 +4,8 @@ class Api::BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
 
+    p @booking
+
     if @booking.save
       render json: @booking
     else 
@@ -13,9 +15,18 @@ class Api::BookingsController < ApplicationController
     
   end 
 
-  def index   
-    @bookings = Booking.all
+  def index  
 
+    if params.has_key?(:listing_id)
+      @bookings = Booking
+                    .all
+                    .where(listing_id: params[:listing_id])
+    else
+      @bookings = Booking
+                    .all
+                    .where(user_id: current_user.id)
+    end
+                
     if @bookings
       render json: @bookings
     else
@@ -23,9 +34,7 @@ class Api::BookingsController < ApplicationController
     end
   end 
   
-  # def show 
-  #   @booking = Booking.find(params[:id])
-  # end
+
 
   def destroy
    @booking = current_user.bookings.find((params[:id]))
